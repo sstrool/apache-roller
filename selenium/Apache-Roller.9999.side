@@ -2,7 +2,7 @@
   "id": "d098dd8f-979f-4f6a-a2de-16bf24e1e811",
   "version": "2.0",
   "name": "Apache-Roller",
-  "url": "http://localhost:8080",
+  "url": "http://localhost:9999",
   "tests": [{
     "id": "464a7af5-8ea3-4e2a-bd9a-a8ca347deed4",
     "name": "SimpleTest",
@@ -470,6 +470,6 @@
     "timeout": 300,
     "tests": ["464a7af5-8ea3-4e2a-bd9a-a8ca347deed4"]
   }],
-  "urls": ["http://localhost:8080/"],
+  "urls": ["http://localhost:9999/"],
   "plugins": []
 }
