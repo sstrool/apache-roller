@@ -19,11 +19,12 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-java@v1
+    - uses: actions/upload-artifact@v3.0.0
       with:
         java-version: 11
         
     
     - name: Black Duck Scan
-      uses: blackducksoftware/github-action@v2, actions/upload-artifact@v3.0.0
+      uses: blackducksoftware/github-action@v2
       with:
         args: --detect.project.name=$PROJECT --detect.project.version.name=$BRANCH --detect.excluded.detector.types=GRADLE --detect.diagnostics=true
