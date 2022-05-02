@@ -26,4 +26,9 @@ jobs:
     - name: Detect Rapid Scan Action
       uses: synopsys-sig/detect-action@v0.3.2
       with:
-        args: --detect.project.name=$PROJECT --detect.project.version.name=$BRANCH --detect.excluded.detector.types=GRADLE
+          scan-mode: RAPID # Can be omitted, since this is the default value
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          detect-version: 7.9.0
+          blackduck-url: ${{ secrets.BLACKDUCK_URL }}
+          blackduck-api-token: ${{ secrets.BLACKDUCK_API_TOKEN }}
+          
