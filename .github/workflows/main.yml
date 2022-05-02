@@ -23,8 +23,7 @@ jobs:
       with:
         java-version: 11
         
-    
-    - name: Black Duck Scan
-      uses: blackducksoftware/github-action@v2
+    - name: Detect Rapid Scan Action
+      uses: synopsys-sig/detect-action@v0.3.2
       with:
         args: --detect.project.name=$PROJECT --detect.project.version.name=$BRANCH --detect.excluded.detector.types=GRADLE
