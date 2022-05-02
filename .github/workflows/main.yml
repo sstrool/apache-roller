@@ -15,6 +15,7 @@ jobs:
       BLACKDUCK_API_TOKEN: ${{ secrets.BLACKDUCK_API_TOKEN }}
       PROJECT: strool-apache-roller
       BRANCH: ${GITHUB_REF##*/}
+      DETECT_DIAGNOSTICS: TRUE
 
     steps:
     - uses: actions/checkout@v2
@@ -26,4 +27,4 @@ jobs:
     - name: Black Duck Scan
       uses: blackducksoftware/github-action@v2
       with:
-        args: --detect.project.name=$PROJECT --detect.project.version.name=$BRANCH --detect.excluded.detector.types=GRADLE --detect.diagnostics=$DETECT_DIAGNOSTICS
+        args: --detect.project.name=$PROJECT --detect.project.version.name=$BRANCH --detect.excluded.detector.types=GRADLE
